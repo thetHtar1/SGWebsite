@@ -1,11 +1,11 @@
-import Footer from "../footerComponent/Footer";
-import Header from "../navbarComponent/Header";
+'use client'
+
 import { useRef, useEffect, useState } from "react";
 
 import Image from "next/image";
-import img1 from "@/pages/assets/images/security1.png";
-import img2 from "@/pages/assets/images/security2.png";
-
+import img1 from "../../../public/images/security1.png";
+import img2 from "../../../public/images/security2.png";
+import './security.css'
 
 export default function SecurityComponent() {
   const [showImage, setShowImage] = useState(false);
@@ -47,22 +47,22 @@ export default function SecurityComponent() {
 
         <>
         {/* <Header/> */}
-     <div className="inter px-4 ss:px-8 lg:px-16 border-b-2 pb-6 mb-6">
+     <div className="inter px-4 ss:px-8 lg:px-16 pb-6 mb-6">
        <div className="pt-3 job-banner mt-[86px] sm:mt-[118px]">
-        <h1 className="rany text-3xl font-medium ss:text-4xl md:text-6xl lg:text-7xl ">
+        <h1 className="rany text-black text-3xl font-medium ss:text-4xl md:text-6xl lg:text-7xl Security-title">
             Security Solutions
         </h1>
        </div>
 
        <div className='security-image-container hidden md:block h-full'  >
       <div className={`security-image md:flex   gap-5 md:mt-14 w-full ${showImage ? 'show' : ''}`}>
-        <Image className='md:basis-1/2 w-full' src={img1} alt="security1" />
-        <Image className='md:basis-1/2 w-full' src={img2} alt="security2" />
+        <Image className='md:basis-1/2 w-96' src={img1} alt="security1" />
+        <Image className='md:basis-1/2 w-96' src={img2} alt="security2" />
       </div>
     </div>
       
 
-       <div className="mt-7 md:mt-14 flex flex-col gap-4 md:flex-row security-body">
+       <div className="mt-7 md:mt-14 flex flex-col lg:flex-row gap-4 md:flex-row security-body text-black">
         <div className="flex flex-col gap-4 basis-1/2 securtiy-body-items" ref={(ref) => (divRefs.current[0] = ref)}>
         <div className="items-security">
             <h1 className="text-sm font-semibold ss:text-xl">
